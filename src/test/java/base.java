@@ -18,15 +18,16 @@ public class base {
 		DesiredCapabilities cap=new DesiredCapabilities();
 		
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android");
-		cap.setCapability(MobileCapabilityType.APP, path+"//ApiDemos-debug.apk");
+		//cap.setCapability(MobileCapabilityType.APP, path+"//ApiDemos-debug.apk");
 		
+		cap.setCapability(MobileCapabilityType.APP, path+"//General-Store.apk");
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		
 		URL url=new URL("http://0.0.0.0:4723/wd/hub");
 		
 		AndroidDriver<AndroidElement> driver=new AndroidDriver<AndroidElement>(url, cap);
 		
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		
 		
 		return driver;
